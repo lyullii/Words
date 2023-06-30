@@ -6,7 +6,7 @@ public class WordsChecker {
     private Set<String> words;
 
     public WordsChecker(String text) {
-        this.words = new HashSet<>(List.of(text.split("\"\\\\P{IsAlphabetic}+\"")));
+        this.words = new HashSet<>(List.of(text.split("\\P{IsAlphabetic}+")));
     }
     public boolean hasWord(String word) {
         return words.contains(word);
